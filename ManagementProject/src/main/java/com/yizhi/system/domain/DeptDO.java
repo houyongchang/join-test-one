@@ -13,7 +13,6 @@ import java.io.Serializable;
  */
 public class DeptDO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
 	//
 	private Long deptId;
 	//上级部门ID，一级部门为0

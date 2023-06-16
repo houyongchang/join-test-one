@@ -12,7 +12,6 @@ public class FileType {
 		if (fileName == null) {
 			fileName = "文件名为空！";
 			return 500;
-
 		} else {
 			// 获取文件后缀名并转化为写，用于后续比较
 			String fileType = fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length()).toLowerCase();

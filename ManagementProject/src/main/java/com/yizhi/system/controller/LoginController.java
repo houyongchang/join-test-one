@@ -47,7 +47,6 @@ public class LoginController extends BaseController {
 	@Autowired
 	DefaultKaptcha defaultKaptcha;
 
-	
 	@GetMapping({ "/", "" })
 	String welcome(Model model) {
 		return "redirect:/index";

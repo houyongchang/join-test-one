@@ -115,4 +115,5 @@ public class LogDO implements Serializable{
 				", gmtCreate=" + gmtCreate +
 				'}';
 	}
+
 }

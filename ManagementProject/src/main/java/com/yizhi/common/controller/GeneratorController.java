@@ -95,4 +95,5 @@ public class GeneratorController {
 		}
 		return R.ok();
 	}
+
 }

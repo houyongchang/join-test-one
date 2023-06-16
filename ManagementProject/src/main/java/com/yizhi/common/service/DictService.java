@@ -39,7 +39,6 @@ public interface DictService {
      * @param userDO
 	 */
 	List<DictDO> getHobbyList(UserDO userDO);
-
 	/**
 	 * 获取性别列表
  	 * @return

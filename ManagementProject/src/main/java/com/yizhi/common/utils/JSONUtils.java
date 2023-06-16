@@ -10,7 +10,7 @@ import java.util.Map;
 public class JSONUtils {
 	/**
 	 * Bean对象转JSON
-	 * 
+	 *
 	 * @param object
 	 * @param dataFormatString
 	 * @return

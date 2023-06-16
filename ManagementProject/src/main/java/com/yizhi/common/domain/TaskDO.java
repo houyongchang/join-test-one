@@ -10,7 +10,6 @@ import java.util.Date;
  */
 public class TaskDO implements Serializable {
     private static final long serialVersionUID = 1L;
-
     //
     private Long id;
     // cron表达式

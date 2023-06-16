@@ -47,4 +47,5 @@ public class ApplicationContextRegister implements ApplicationContextAware {
     public static <T> T getBean(Class<T> type) {
         return APPLICATION_CONTEXT.getBean(type);
     }
+
 }

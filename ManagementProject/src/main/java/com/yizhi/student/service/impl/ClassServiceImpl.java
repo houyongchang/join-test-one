@@ -21,7 +21,7 @@ public class ClassServiceImpl implements ClassService {
 	public ClassDO get(Integer id){
 		return classDao.get(id);
 	}
-	
+
 	@Override
 	public List<ClassDO> list(Map<String, Object> map){
 		return classDao.list(map);

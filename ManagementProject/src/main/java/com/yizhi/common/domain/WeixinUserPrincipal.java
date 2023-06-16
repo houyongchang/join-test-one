@@ -18,7 +18,6 @@ public class WeixinUserPrincipal implements Serializable {
     public WeixinUserPrincipal(){
 
     }
-
     public String getUserid() {
         return userid;
     }

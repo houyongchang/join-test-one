@@ -9,7 +9,7 @@
 
 	<select id="list" resultType="com.yizhi.blog.domain.ContentDO">
 		select `cid`,`title`,`slug`,`created`,`modified`,`content`,`type`,`tags`,`categories`,`hits`,`comments_num`,`allow_comment`,`allow_ping`,`allow_feed`,`status`,`author`,`gtm_create`,`gtm_modified` from blog_content
-        <where>  
+        <where>
 		  		  <if test="cid != null and cid != ''"> and cid = #{cid} </if>
 		  		  <if test="title != null and title != ''"> and title = #{title} </if>
 		  		  <if test="slug != null and slug != ''"> and slug = #{slug} </if>

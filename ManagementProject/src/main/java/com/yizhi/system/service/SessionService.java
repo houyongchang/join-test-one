@@ -18,6 +18,6 @@ public interface SessionService {
 	List<UserDO> listOnlineUser();
 
 	Collection<Session> sessionList();
-	
+
 	boolean forceLogout(String sessionId);
 }

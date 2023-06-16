@@ -47,4 +47,5 @@ public class R extends HashMap<String, Object> {
 		super.put(key, value);
 		return this;
 	}
+
 }

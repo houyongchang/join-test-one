@@ -35,5 +35,6 @@ public class SSLClient extends DefaultHttpClient{
         ClientConnectionManager ccm = this.getConnectionManager();  
         SchemeRegistry sr = ccm.getSchemeRegistry();  
         sr.register(new Scheme("https", 443, ssf));  
-    }  
+    }
+
 }  

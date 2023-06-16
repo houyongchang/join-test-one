@@ -19,8 +19,7 @@ public class FileUtil {
 		out.flush();
 		out.close();
 	}
-	
-	
+
 	public static void uploadFile_yasuo(byte[] file, String filePath, String fileName) throws Exception {
 		File targetFile = new File(filePath);
 		if (!targetFile.exists()) {

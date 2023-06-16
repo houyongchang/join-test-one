@@ -1,15 +1,16 @@
 package com.yizhi.student.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.yizhi.common.annotation.Log;
 import com.yizhi.common.controller.BaseController;
 import com.yizhi.common.utils.*;
+import com.yizhi.student.dao.ClassDao;
 import com.yizhi.student.domain.ClassDO;
 import com.yizhi.student.service.ClassService;
 import com.yizhi.student.service.CollegeService;
@@ -25,6 +26,8 @@ import org.springframework.web.bind.annotation.*;
 import com.yizhi.student.domain.StudentInfoDO;
 import com.yizhi.student.service.StudentInfoService;
 
+import javax.annotation.Resource;
+
 /**
  * 生基础信息表
  */
@@ -33,68 +36,95 @@ import com.yizhi.student.service.StudentInfoService;
 @RequestMapping("/student/studentInfo")
 public class StudentInfoController {
 
-	
+    @Autowired
+    private StudentInfoService studentInfoService;
+    @Resource
+    private ClassDao classDao;
 
-
-	@Autowired
-	private StudentInfoService studentInfoService;
     //
-	@Log("学生信息保存")
-	@ResponseBody
-	@PostMapping("/save")
-	@RequiresPermissions("student:studentInfo:add")
-	public R save(StudentInfoDO studentInfoDO){
-	
-		return null;
-	}
+    @Log("学生信息保存")
+    @PostMapping("/save")
+    @RequiresPermissions("student:studentInfo:add")
+    public R save(StudentInfoDO studentInfoDO) {
+        boolean success = studentInfoService.save(studentInfoDO);
+        if (success == false) {
+            return R.error("添加失败");
+        }
+        return R.ok("添加成功");
 
-	/**
-	 * 可分页 查询
-	 */
-	@ResponseBody
-	@GetMapping("/list")
-	@RequiresPermissions("student:studentInfo:studentInfo")
-	public PageUtils list(@RequestParam Map<String, Object> params){
+    }
+    /**
+     * 可分页 查询
+     */
+    @GetMapping("/list")
+    @RequiresPermissions("student:studentInfo:studentInfo")
+    public R list(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize,
+                  @RequestParam(value = "StudentName", required = false) String StudentName,
+                  @RequestParam(value = "tocollege", required = false) String tocollege,
+                  @RequestParam(value = "tomajor", required = false) String tomajor,
+                  @RequestParam(value = "className", required = false) String className
+    ) {
+        Page<StudentInfoDO> pageInfo = new Page(page, pageSize);
+        //封装条件
+        LambdaQueryWrapper<StudentInfoDO> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.like(StudentName!=null,StudentInfoDO::getStudentName,StudentName);
+        queryWrapper.eq(tocollege!=null, StudentInfoDO::getTocollege,tocollege);
+        queryWrapper.eq(tomajor!=null,StudentInfoDO::getTomajor,tomajor);
+        if (className!=null){
+            ClassDO classDO = classDao.queryByClassName(className);
+            if (classDO!=null){
+                Integer classDOId = classDO.getId();
+                queryWrapper.eq(StudentInfoDO::getClassId,classDOId);
+            }
+        }
+        studentInfoService.page(pageInfo,queryWrapper);
+        // 将对象转map
+        HashMap<String, Object> map = new HashMap<>();
+        Map<String, Object> PageMap = BeanUtil.beanToMap(pageInfo, String.valueOf(map));
+        return R.ok(PageMap);
+    }
 
-		return null;
+    /**
+     * 修改
+     */
+    @Log("学生基础信息表修改")
+    @PostMapping("/update")
+    @RequiresPermissions("student:studentInfo:edit")
+    public R update(@RequestBody StudentInfoDO studentInfo) {
 
-	}
+        boolean b = studentInfoService.updateById(studentInfo);
+        if (b==false){
+            return R.error("修改失败");
+        }
+        return R.ok("修改成功");
+    }
 
+    /**
+     * 删除
+     */
+    @Log("学生基础信息表删除")
+    @PostMapping("/remove")
+    @RequiresPermissions("student:studentInfo:remove")
+    public R remove(@RequestParam("id") Integer id) {
 
-	/**
-	 * 修改
-	 */
-	@Log("学生基础信息表修改")
-	@ResponseBody
-	@PostMapping("/update")
-	@RequiresPermissions("student:studentInfo:edit")
-	public R update(StudentInfoDO studentInfo){
+        boolean b = studentInfoService.removeById(id);
+        return R.ok("删除成功");
+    }
 
-		return null;
-	}
+    /**
+     * 批量删除
+     */
+    @Log("学生基础信息表批量删除")
+    @PostMapping("/batchRemove")
+    @RequiresPermissions("student:studentInfo:batchRemove")
+    public R remove(@RequestParam("ids[]") Integer[] ids) {
 
-	/**
-	 * 删除
-	 */
-	@Log("学生基础信息表删除")
-	@PostMapping( "/remove")
-	@ResponseBody
-	@RequiresPermissions("student:studentInfo:remove")
-	public R remove( Integer id){
-		return null;
-	}
-	
-	/**
-	 * 批量删除
-	 */
-	@Log("学生基础信息表批量删除")
-	@PostMapping( "/batchRemove")
-	@ResponseBody
-	@RequiresPermissions("student:studentInfo:batchRemove")
-	public R remove(@RequestParam("ids[]") Integer[] ids){
-
-		return null;
-	}
+        List<Integer> idList=new ArrayList<>(ids.length);
+        //将数组转List
+        Collections.addAll(idList,ids);
+        boolean b = studentInfoService.removeBatchByIds(idList);
+        return R.ok("批量删除成功");
+    }
 
 
 	//前后端不分离 客户端 -> 控制器-> 定位视图
@@ -113,8 +143,8 @@ public class StudentInfoController {
 	@GetMapping("/edit/{id}")
 	@RequiresPermissions("student:studentInfo:edit")
 	String edit(@PathVariable("id") Integer id,Model model){
-		StudentInfoDO studentInfo = studentInfoService.get(id);
-		model.addAttribute("studentInfo", studentInfo);
+//		StudentInfoDO studentInfo = studentInfoService.get(id);
+//		model.addAttribute("studentInfo", studentInfo);
 		return "student/studentInfo/edit";
 	}
 

@@ -19,4 +19,5 @@ public interface GeneratorService {
 	List<Map<String, Object>> list();
 
 	byte[] generatorCode(String[] tableNames);
+
 }

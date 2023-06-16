@@ -32,4 +32,5 @@ public class RoleMenuDO {
 				", menuId=" + menuId +
 				'}';
 	}
+
 }

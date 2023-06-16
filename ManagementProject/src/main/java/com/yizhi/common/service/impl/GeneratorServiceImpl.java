@@ -40,5 +40,4 @@ public class GeneratorServiceImpl implements GeneratorService {
 		IOUtils.closeQuietly(zip);
 		return outputStream.toByteArray();
 	}
-
 }

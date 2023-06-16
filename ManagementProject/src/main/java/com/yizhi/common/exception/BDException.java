@@ -47,6 +47,5 @@ public class BDException extends RuntimeException {
 	public void setCode(int code) {
 		this.code = code;
 	}
-	
-	
+
 }

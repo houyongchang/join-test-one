@@ -224,5 +224,4 @@ public class RedisManager {
         this.password = password;
     }
 
-
 }

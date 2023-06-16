@@ -148,4 +148,5 @@ public class Encodes {
 			throw Exceptions.unchecked(e);
 		}
 	}
+
 }

@@ -78,7 +78,6 @@ public class JobController extends BaseController{
 		}
 		return R.error();
 	}
-
 	/**
 	 * 修改
 	 */

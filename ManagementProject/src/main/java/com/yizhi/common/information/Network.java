@@ -16,7 +16,6 @@ public class Network {
 	private String DisplayName;
 	
 	private String Speed;
-	
 
 	public String getBytesRecv() {
 		return BytesRecv;

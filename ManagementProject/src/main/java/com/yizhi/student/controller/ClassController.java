@@ -30,7 +30,7 @@ import com.yizhi.common.utils.R;
  * @email 499345515@qq.com
  * @date 2019-07-29 14:20:37
  */
- 
+
 @Controller
 @RequestMapping("/student/class")
 public class ClassController {

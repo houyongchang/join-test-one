@@ -147,4 +147,5 @@ public class FrontUser implements Serializable{
     public void setOpenUser(OpenUser openUser) {
         this.openUser = openUser;
     }
+
 }

@@ -26,7 +26,6 @@ public class KaptchaConfig {
 		properties.setProperty("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
 		Config config = new Config(properties);
 		defaultKaptcha.setConfig(config);
-		
 		return defaultKaptcha;
 	}
 }

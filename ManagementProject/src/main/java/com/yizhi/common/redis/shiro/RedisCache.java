@@ -23,7 +23,6 @@ import com.yizhi.common.config.Constant;
 public class RedisCache<K, V> implements Cache<K, V> {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-
     /**
      * The wrapped Jedis instance.
      */

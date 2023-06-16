@@ -54,7 +54,6 @@ public class WeiXinJwtUtil {
         }
         return null;
     }
-
     public String createJWT(WeixinUserPrincipal member, String base64Security)
     {
         //生成签名密钥

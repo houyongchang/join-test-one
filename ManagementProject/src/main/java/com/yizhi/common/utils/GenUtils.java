@@ -28,7 +28,6 @@ import java.util.zip.ZipOutputStream;
 @SuppressWarnings("AlibabaRemoveCommentedCode")
 public class GenUtils {
 
-
     public static List<String> getTemplates() {
         List<String> templates = new ArrayList<String>();
         templates.add("templates/common/generator/domain.java.vm");

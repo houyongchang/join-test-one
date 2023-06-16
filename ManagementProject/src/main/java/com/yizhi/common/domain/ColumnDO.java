@@ -90,4 +90,5 @@ public class ColumnDO {
 				", extra='" + extra + '\'' +
 				'}';
 	}
+
 }

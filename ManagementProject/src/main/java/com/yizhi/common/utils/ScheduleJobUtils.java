@@ -17,4 +17,5 @@ public class ScheduleJobUtils {
 		scheduleJob.setSpringBean(scheduleJobEntity.getSpringBean());
 		return scheduleJob;
 	}
+
 }

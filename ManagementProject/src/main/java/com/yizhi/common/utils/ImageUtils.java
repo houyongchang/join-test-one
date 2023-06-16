@@ -32,7 +32,6 @@ public class ImageUtils {
 
     // 缩略图后缀
     private static final String SUFFIX = "-thumbnail";
-	
     /***
      * 剪裁图片
      * @param file 图片

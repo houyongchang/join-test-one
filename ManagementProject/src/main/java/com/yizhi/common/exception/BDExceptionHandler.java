@@ -79,7 +79,6 @@ public class BDExceptionHandler {
         }
         return new ModelAndView("error/403");
     }
-
 /*
     @ExceptionHandler({Exception.class})
     public Object handleException(Exception e, HttpServletRequest request) {

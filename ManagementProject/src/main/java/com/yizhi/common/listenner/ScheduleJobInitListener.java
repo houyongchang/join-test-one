@@ -27,5 +27,4 @@ public class ScheduleJobInitListener implements CommandLineRunner {
 		}
 
 	}
-
 }

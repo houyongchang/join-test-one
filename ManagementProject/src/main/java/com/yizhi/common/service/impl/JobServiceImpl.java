@@ -133,5 +133,4 @@ public class JobServiceImpl implements JobService {
 		quartzManager.runAJobNow(ScheduleJobUtils.entityToData(scheduleJob));
 		return 0;
 	}
-
 }

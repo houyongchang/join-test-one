@@ -54,7 +54,6 @@ public class QuartzManager {
 	 * @param scheduleJob
 	 * @throws SchedulerException
 	 */
-	
 	public void addJob(ScheduleJob job) {
 		try {
 			// 创建jobDetail实例，绑定Job实现类

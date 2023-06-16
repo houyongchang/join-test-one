@@ -129,5 +129,6 @@ public class DruidDBConfig {
         filterRegistrationBean.addInitParameter("DruidWebStatFilter","/*");
         return filterRegistrationBean;
     }
+
 }
 

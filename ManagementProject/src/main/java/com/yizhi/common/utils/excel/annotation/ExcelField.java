@@ -56,7 +56,6 @@ public @interface ExcelField {
 	 * 字段归属组（根据分组导出导入）
 	 */
 	int[] groups() default {};
-	
 	/**
 	 * 
 	 * 时间格式化

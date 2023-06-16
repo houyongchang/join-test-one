@@ -37,6 +37,7 @@ public class EncodeAndDecode {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}*/
 
 	private static String strDefaultKey = "whd123huixuewnag";

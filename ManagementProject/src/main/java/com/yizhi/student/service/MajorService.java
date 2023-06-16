@@ -15,7 +15,7 @@ import java.util.Map;
 public interface MajorService {
 	
 	MajorDO get(Integer id);
-	
+
 	List<MajorDO> list(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);

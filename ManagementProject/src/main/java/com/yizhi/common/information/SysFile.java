@@ -33,7 +33,6 @@ public class SysFile {
      * 已经使用量
      */
     private String used;
-
     /**
      * 资源的使用率
      */

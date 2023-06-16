@@ -9,7 +9,6 @@ public class Cpu {
      * 核心数
      */
     private int cpuNum;
-
     /**
      * CPU总的使用率
      */

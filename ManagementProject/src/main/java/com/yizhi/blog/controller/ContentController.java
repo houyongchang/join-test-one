@@ -31,6 +31,7 @@ public class ContentController extends BaseController {
 	@Autowired
     ContentService bContentService;
 
+
 	@GetMapping()
 	@RequiresPermissions("blog:bContent:bContent")
 	String bContent() {

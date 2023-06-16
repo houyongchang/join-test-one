@@ -13,7 +13,7 @@
 		  a.tocollege_id,
 		  sc.college_name
 		</sql>
-	
+
 	
 	<sql id="MajorJoins">
 		left join sys_college sc on sc.id=a.tocollege_id

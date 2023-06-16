@@ -13,4 +13,5 @@ public interface LogService {
 	int remove(Long id);
 	int batchRemove(Long[] ids);
 	int save(LogDO logDO);
+
 }

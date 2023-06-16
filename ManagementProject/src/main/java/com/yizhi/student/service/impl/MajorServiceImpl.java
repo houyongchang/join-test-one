@@ -21,7 +21,7 @@ public class MajorServiceImpl implements MajorService {
 	public MajorDO get(Integer id){
 		return majorDao.get(id);
 	}
-	
+
 	@Override
 	public List<MajorDO> list(Map<String, Object> map){
 		return majorDao.list(map);

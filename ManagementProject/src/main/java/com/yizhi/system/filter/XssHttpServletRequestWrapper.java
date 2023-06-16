@@ -22,7 +22,7 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
         this.isIncludeRichText = isIncludeRichText;
     }  
   
-    /** 
+    /**
     * 覆盖getParameter方法，将参数名和参数值都做xss过滤。<br/> 
     * 如果需要获得原始的值，则通过super.getParameterValues(name)来获取<br/> 
     * getParameterNames,getParameterValues和getParameterMap也可能需要覆盖 

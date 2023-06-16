@@ -29,4 +29,5 @@ public interface TaskDao {
 	int remove(Long id);
 	
 	int batchRemove(Long[] ids);
+
 }

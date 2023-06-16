@@ -10,4 +10,5 @@ public enum  OpenType {
     public int getValue() {
         return value;
     }
+
 }

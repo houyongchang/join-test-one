@@ -8,7 +8,6 @@ public class TokenValidException  extends AuthenticationException {
     public TokenValidException() {
         super();
     }
-
     /**
      * Constructs a new AuthenticationException.
      *

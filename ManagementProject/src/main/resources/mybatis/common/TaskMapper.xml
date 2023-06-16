@@ -9,7 +9,7 @@
 
 	<select id="list" resultType="com.yizhi.common.domain.TaskDO">
 		select `id`,`cron_expression`,`method_name`,`is_concurrent`,`description`,`update_by`,`bean_class`,`create_date`,`job_status`,`job_group`,`update_date`,`create_by`,`spring_bean`,`job_name` from sys_task
-        <where>  
+        <where>
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="cronExpression != null and cronExpression != ''"> and cron_expression = #{cronExpression} </if>
 		  		  <if test="methodName != null and methodName != ''"> and method_name = #{methodName} </if>

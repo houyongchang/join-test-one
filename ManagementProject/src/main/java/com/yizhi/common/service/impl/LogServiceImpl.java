@@ -33,7 +33,6 @@ public class LogServiceImpl implements LogService {
 		page.setRows(logs);
 		return page;
 	}
-
 	@Override
 	public int remove(Long id) {
 		int count = logMapper.remove(id);

@@ -15,7 +15,7 @@ import java.util.Map;
 public interface ClassService {
 	
 	ClassDO get(Integer id);
-	
+
 	List<ClassDO> list(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);

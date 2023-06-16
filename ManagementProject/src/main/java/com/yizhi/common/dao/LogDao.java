@@ -31,4 +31,5 @@ public interface LogDao {
 	int batchRemove(Long[] ids);
 	
 	int removeBeforeOneMonth();
+
 }

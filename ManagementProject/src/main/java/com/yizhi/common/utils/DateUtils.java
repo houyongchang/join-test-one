@@ -34,7 +34,6 @@ public class DateUtils {
         }
         return null;
     }
-
     /**
      * 计算距离现在多久，非精确
      *

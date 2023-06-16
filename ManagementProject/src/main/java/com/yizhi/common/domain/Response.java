@@ -24,8 +24,6 @@ public class Response {
 		this.msg = msg;
 	}
 
-
-
 	public Object getData() {
 		return data;
 	}

@@ -50,7 +50,7 @@ public class StringUtil {
 	}
 	 /** 
      * 使用java正则表达式去掉多余的.与0 
-     * @param s 
+     * @param s
      * @return  
      */  
     public static String subZeroAndDot(String s){  

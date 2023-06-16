@@ -7,7 +7,7 @@
         <id column="user_id" property="userId"></id>
         <collection property="roles" column="{userId=user_id}" select="com.yizhi.system.dao.UserRoleDao.list"/>
     </resultMap>
-	
+
 	<sql id="userColumns">
     	a.user_id,
     	a.username,

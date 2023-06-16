@@ -29,4 +29,6 @@ public interface ContentDao {
 	int remove(Long cid);
 	
 	int batchRemove(Long[] cids);
+
+
 }

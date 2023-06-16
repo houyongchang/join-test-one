@@ -22,7 +22,7 @@ public class UserDO implements Serializable {
     // 部门
     private Long deptId;
     private String deptName;
-    
+
     private DeptDO deptDO;
     // 邮箱
     private String email;

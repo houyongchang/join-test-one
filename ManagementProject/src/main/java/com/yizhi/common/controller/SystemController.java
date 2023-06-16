@@ -23,7 +23,8 @@ public class SystemController {
         model.addAttribute("server", server);
         return "system/info";
     }
-    
+
+
     @GetMapping("/system/info/json")
     @RequiresPermissions("common:system:info")
 	@ResponseBody

@@ -17,7 +17,6 @@ import com.vdurmont.emoji.EmojiParser;
  * @time 2017年4月27日 下午5:47:09
  */
 public class JsoupUtil {
-
 	/**
 	 * 使用自带的basicWithImages 白名单
 	 * 允许的便签有a,b,blockquote,br,cite,code,dd,dl,dt,em,i,li,ol,p,pre,q,small,span,

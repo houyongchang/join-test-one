@@ -14,8 +14,8 @@ import java.util.Date;
  */
 public class ContentDO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	//
+
+
 	private Long cid;
 	//标题
 	private String title;

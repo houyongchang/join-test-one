@@ -68,4 +68,5 @@ public class Sys {
     public void setOsArch(String osArch) {
         this.osArch = osArch;
     }
+
 }

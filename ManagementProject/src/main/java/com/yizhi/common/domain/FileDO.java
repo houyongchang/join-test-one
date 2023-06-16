@@ -22,7 +22,6 @@ public class FileDO implements Serializable {
     // 创建时间
     private Date createDate;
 
-
     public FileDO() {
         super();
     }

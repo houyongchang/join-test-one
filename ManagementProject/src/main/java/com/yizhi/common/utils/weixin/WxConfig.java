@@ -9,3 +9,4 @@ public class WxConfig {
 	    public static String appxcxid="";
 	    public static String appxcxsecret="";
 }
+

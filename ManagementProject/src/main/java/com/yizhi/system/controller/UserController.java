@@ -100,7 +100,6 @@ public class UserController extends BaseController {
 				return R.error("手机号已经存在");
 			}
 		}
-		
 		user.setGmtCreate(new Date());
 		if (user.getReceiveMsg()==null) {
 			user.setReceiveMsg(0);

@@ -15,7 +15,7 @@ import java.util.Map;
 public interface CollegeService {
 	
 	CollegeDO get(Integer id);
-	
+
 	List<CollegeDO> list(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);

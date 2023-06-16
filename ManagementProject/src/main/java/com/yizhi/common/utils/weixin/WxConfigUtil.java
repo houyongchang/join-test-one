@@ -72,7 +72,8 @@ public class WxConfigUtil {
         } catch (Exception localException) {
         }
     }
- 
+
+
     public static String sendText(String openid, String content) throws Exception {
         String token = getToken();
         if (token != null) {

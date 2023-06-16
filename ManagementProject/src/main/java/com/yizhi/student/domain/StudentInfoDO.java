@@ -3,6 +3,7 @@ package com.yizhi.student.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -15,6 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * @email 499345515@qq.com
  * @date 2019-08-01 09:45:46
  */
+@TableName("s_student_info")
 public class StudentInfoDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

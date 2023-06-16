@@ -67,8 +67,11 @@
 		  		  <if test="classNum != null and classNum != ''"> and a.class_num = #{classNum} </if>
 		  		</where>
 	</select>
-	 
-	<insert id="save" parameterType="com.yizhi.student.domain.ClassDO" useGeneratedKeys="true" keyProperty="id">
+    <select id="queryByClassName" resultType="com.yizhi.student.domain.ClassDO">
+                SELECT id,class_name, single_name ,tocollege_id,tomajor_id,class_num from sys_class where class_name=#{ClassName}
+    </select>
+
+    <insert id="save" parameterType="com.yizhi.student.domain.ClassDO" useGeneratedKeys="true" keyProperty="id">
 		insert into sys_class
 		(
 			`class_name`, 

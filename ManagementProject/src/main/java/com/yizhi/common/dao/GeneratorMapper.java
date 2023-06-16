@@ -20,4 +20,6 @@ public interface GeneratorMapper {
 	@Select("select column_name columnName, data_type dataType, column_comment columnComment, column_key columnKey, extra from information_schema.columns\r\n"
 			+ " where table_name = #{tableName} and table_schema = (select database()) order by ordinal_position")
 	List<Map<String, String>> listColumns(String tableName);
+
 }
+

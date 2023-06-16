@@ -18,4 +18,5 @@ public class JobFactory extends AdaptableJobFactory {
         capableBeanFactory.autowireBean(jobInstance);
         return jobInstance;
     }
+
 }

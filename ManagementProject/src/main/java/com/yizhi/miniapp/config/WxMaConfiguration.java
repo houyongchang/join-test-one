@@ -26,7 +26,7 @@ import me.chanjar.weixin.common.error.WxErrorException;
  */
 @Configuration
 @EnableConfigurationProperties(WxMaProperties.class)
-public class WxMaConfiguration {
+public class  WxMaConfiguration {
     private final WxMaMessageHandler templateMsgHandler = (wxMessage, context, service, sessionManager) ->
         service.getMsgService().sendTemplateMsg(WxMaTemplateMessage.builder()
             .templateId("此处更换为自己的模板id")

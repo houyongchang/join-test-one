@@ -37,4 +37,5 @@ public interface JobService {
 	void updateCron(Long jobId) throws SchedulerException;
 	
 	int runAJobNow(Long jobId) throws SchedulerException;
+
 }

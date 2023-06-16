@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class MajorDO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	//
 	private Integer id;
 	//专业名称

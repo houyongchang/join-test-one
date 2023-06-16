@@ -43,7 +43,6 @@ public class MainsiteErrorController implements ErrorController {
         }
 
     }
-
     @RequestMapping(value = ERROR_PATH)
     public R handleError(HttpServletRequest request, HttpServletResponse response) {
     	 int code = response.getStatus();

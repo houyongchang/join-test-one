@@ -67,7 +67,6 @@ public class DictController extends BaseController {
 		model.addAttribute("sysDict", sysDict);
 		return "common/sysDict/edit";
 	}
-
 	/**
 	 * 保存
 	 */

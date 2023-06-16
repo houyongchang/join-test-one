@@ -2,7 +2,7 @@ package com.yizhi.common.utils;
 
 /**
  * 自定义异常
- * 
+
  */
 public class BDException extends RuntimeException {
 	private static final long serialVersionUID = 1L;

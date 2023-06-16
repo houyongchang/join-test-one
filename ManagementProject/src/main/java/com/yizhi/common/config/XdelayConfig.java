@@ -45,7 +45,7 @@ public class XdelayConfig {
      
     @Bean
     public Queue assignOrderQueue() {
-       
+
         return new Queue(ORDER_ASSIGN_QUEUE);
     }
    */

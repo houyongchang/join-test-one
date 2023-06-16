@@ -17,7 +17,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MajorDao {
 
 	MajorDO get(Integer id);
-	
+
 	List<MajorDO> list(Map<String,Object> map);
 	
 	int count(Map<String,Object> map);

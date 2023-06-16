@@ -11,8 +11,6 @@
 		  a.introduce,	  
 		  a.college_num
 		</sql>
-	
-	
 	<sql id="CollegeJoins">
 	
     </sql>

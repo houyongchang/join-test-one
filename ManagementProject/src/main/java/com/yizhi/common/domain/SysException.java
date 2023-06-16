@@ -33,6 +33,5 @@ public class SysException extends Exception {
     public void setValues(Object values) {
         this.values = values;
     }
-
 }
 

@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class CollegeDO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	//主键
 	private Integer id;
 	//学院名称

@@ -21,8 +21,7 @@ public class QuartzConfigration {
 
 	@Autowired
 	JobFactory jobFactory;
-	
-	 
+
 	@Bean
 	public SchedulerFactoryBean schedulerFactoryBean(@Qualifier("DruidDataSource") DataSource dataSource) {
 		SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();

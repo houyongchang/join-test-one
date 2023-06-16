@@ -19,7 +19,7 @@ public interface UserDao {
 	UserDO get(Long userId);
 	UserDO fget(Long userId);
 	List<UserDO> list(Map<String,Object> map);
-	
+
 	int count(Map<String,Object> map);
 	
 	int save(UserDO user);

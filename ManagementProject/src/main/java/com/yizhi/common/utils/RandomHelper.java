@@ -47,7 +47,6 @@ public final class RandomHelper {
         return randomString().toUpperCase();
     }
 
-
     /**
      * 生成UUID
      *

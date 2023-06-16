@@ -21,7 +21,7 @@ public class CollegeServiceImpl implements CollegeService {
 	public CollegeDO get(Integer id){
 		return collegeDao.get(id);
 	}
-	
+
 	@Override
 	public List<CollegeDO> list(Map<String, Object> map){
 		return collegeDao.list(map);

@@ -88,7 +88,6 @@ public class DictServiceImpl implements DictService {
                 }
             }
         }
-
         return hobbyList;
     }
 

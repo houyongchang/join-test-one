@@ -19,7 +19,7 @@ public interface RoleMenuDao {
 	RoleMenuDO get(Long id);
 	
 	List<RoleMenuDO> list(Map<String,Object> map);
-	
+
 	int count(Map<String,Object> map);
 	
 	int save(RoleMenuDO roleMenu);

@@ -21,6 +21,7 @@ public class BlogController {
 	@Autowired
     ContentService bContentService;
 
+
 	@GetMapping()
 	String blog() {
 		return "blog/index/main";

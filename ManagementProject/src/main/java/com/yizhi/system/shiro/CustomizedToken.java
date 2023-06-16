@@ -13,7 +13,7 @@ public class CustomizedToken extends UsernamePasswordToken {
         super(username,password);
         this.loginType = loginType;
     }
-    
+
     public CustomizedToken(final String username, final String password) {
         super(username,password);
         this.loginType = Constant.LOGIN_TYPE_PC;

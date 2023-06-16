@@ -16,4 +16,5 @@ public class yizhiConfig {
 	public void setUploadPath(String uploadPath) {
 		this.uploadPath = uploadPath;
 	}
+
 }

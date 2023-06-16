@@ -27,4 +27,5 @@ public interface ContentService {
 	int remove(Long cid);
 	
 	int batchRemove(Long[] cids);
+
 }

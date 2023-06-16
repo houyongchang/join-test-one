@@ -27,7 +27,6 @@ public class ShiroUtils {
 		}else {
 			return (UserDO)getSubjct().getPrincipal();
 		}
-		
 	}
 	public static Long getUserId() {
 		return getUser().getUserId();

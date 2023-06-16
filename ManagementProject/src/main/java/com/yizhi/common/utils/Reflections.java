@@ -45,7 +45,6 @@ public class Reflections {
 		}
 		return object;
 	}
-
 	/**
 	 * 调用Setter方法, 仅匹配方法名。
 	 * 支持多级，如：对象名.对象名.方法

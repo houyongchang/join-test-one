@@ -11,7 +11,7 @@ $.ProgressBar = function(options) {
 	if (options.on && options.on.valueChange){
 		this.onValueChange = options.on.valueChange;
 	}
-	
+
 	this._create();
 	
 	if (options.label)

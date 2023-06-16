@@ -86,4 +86,5 @@ public class BeanHump {
 		System.out.println(underlineToCamel("user_name_all"));
 		System.out.println(underlineToCamel2("user_name_all"));
 	}
+
 }

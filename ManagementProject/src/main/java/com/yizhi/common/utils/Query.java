@@ -16,7 +16,6 @@ public class Query extends LinkedHashMap<String, Object> {
 	private int currPage=1;
 	
 	private int pageSize=10;
-	 
 
 	public Query(Map<String, Object> params) {
 		this.putAll(params);

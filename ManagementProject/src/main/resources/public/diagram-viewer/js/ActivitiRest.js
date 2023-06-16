@@ -16,6 +16,7 @@ var ActivitiRest = {
 				  callback.apply({processDefinitionId: processDefinition.id});
 				}
 			}
+
 		}).done(function(data, textStatus) {
 			console.log("ajax done");
 		}).fail(function(jqXHR, textStatus, error){

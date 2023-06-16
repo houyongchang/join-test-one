@@ -12,7 +12,8 @@ import java.net.URL;
  *  @project:personGocheck 
  *  @class:AddressUtils.java 
  *  @author:heguanhua E-mail:37809893@qq.com 
- *  @date：Nov 14, 2012 6:38:25 PM 
+ *  @date：Nov 14, 2012 6:38:25 PM
+ *
  */  
 public class AddressUtils {   
  /** 

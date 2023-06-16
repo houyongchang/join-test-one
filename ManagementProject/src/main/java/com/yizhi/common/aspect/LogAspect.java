@@ -28,6 +28,7 @@ public class LogAspect {
 	@Autowired
 	LogDao logMapper;
 
+
 	@Pointcut("@annotation(com.yizhi.common.annotation.Log)")
 	public void logPointCut() {
 	}

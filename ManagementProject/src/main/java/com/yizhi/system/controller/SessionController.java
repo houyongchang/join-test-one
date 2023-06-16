@@ -43,7 +43,6 @@ public class SessionController {
 			e.printStackTrace();
 			return R.error();
 		}
-
 	}
 
 	@ResponseBody

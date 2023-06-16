@@ -23,11 +23,10 @@ public class clearLogJob implements Job{
 	
 	@Autowired
 	LogDao logDao;
-	
-	
+
 	@Autowired
 	UserDao userDao;
-	
+
 	@Autowired
 	private yizhiConfig yizhiConfig;
 

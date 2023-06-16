@@ -23,7 +23,7 @@ public class PageUtils implements Serializable {
 
 	/**
 	 * 分页
-	 * 
+	 *
 	 * @param list
 	 *            列表数据
 	 * @param totalCount

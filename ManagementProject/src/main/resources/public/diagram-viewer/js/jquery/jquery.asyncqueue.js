@@ -19,7 +19,6 @@
 			_complete,
 			inQueue = 0,
 			defaultTimeOut = 10;
-
         _run = function() {
             var f = queue.shift();
 

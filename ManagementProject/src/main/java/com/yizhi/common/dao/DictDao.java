@@ -34,4 +34,5 @@ public interface DictDao {
 	List<DictDO> listType();
 	
 	List<DictDO> getXiuTypebyArea(Map<String, Object> map);
+
 }

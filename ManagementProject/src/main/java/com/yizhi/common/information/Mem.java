@@ -14,7 +14,6 @@ public class Mem {
      * 已用内存
      */
     private double used;
-
     /**
      * 剩余内存
      */

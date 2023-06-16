@@ -5,7 +5,6 @@ import java.io.Serializable;
 
 public class OpenUser implements Serializable {
     /**
-     *
      */
     private static final long serialVersionUID = 1L;
     private OpenType opentype;//开放平台类型

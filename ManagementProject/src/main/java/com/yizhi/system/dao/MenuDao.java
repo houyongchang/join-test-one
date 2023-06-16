@@ -33,4 +33,5 @@ public interface MenuDao {
 	List<MenuDO> listMenuByUserId(Long id);
 	
 	List<String> listUserPerms(Long id);
+
 }

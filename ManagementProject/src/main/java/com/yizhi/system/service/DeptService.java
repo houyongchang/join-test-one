@@ -20,7 +20,7 @@ public interface DeptService {
 	List<DeptDO> list(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);
-	
+
 	int save(DeptDO sysDept);
 	
 	int update(DeptDO sysDept);
